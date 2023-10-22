@@ -27,7 +27,7 @@ const register = async e => {
     });
     if (response.ok) {
       alert("Usuario creado exitosamente.");
-      window.location.href = "./html/login.html";
+      window.location.href = "./login.html";
     } else {
       alert("Error en la solicitud de registro.");
     }
@@ -42,5 +42,5 @@ if (token) {
 }
 
 document
-  .getElementById("registration-form")
+  .getElementById("register-form")
   .addEventListener("submit", register);
