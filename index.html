@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registros Médicos</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./html/medical-record-form.html">Formulario</a></li>
+        </ul>
+        <div id="logout-link">
+            <a href="./login.html">Cerrar Sesión</a>
+        </div>
+    </nav>
+    <main>
+        <h1>Registros Médicos</h1>
+        <!-- Tabla para mostrar registros médicos -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID del Paciente</th>
+                    <th>Fecha de la Cita</th>
+                    <th>Diagnóstico</th>
+                    <th>Medicamentos</th>
+                    <th>Fecha de Seguimiento</th>
+                    <th>Notas</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="medical-record-table">
+                <!-- Los registros se cargarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>

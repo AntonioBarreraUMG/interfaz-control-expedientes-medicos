@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario de Registro Médico</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./medical-record-form.html">Formulario</a></li>
+            </ul>
+            <div id="logout-link">
+                <a href="./login.html">Cerrar Sesión</a>
+            </div>
+        </nav>
+        <main>
+            <h1>Registro Médico</h1>
+            <form id="medical-record-form">
+                <label for="patient_id">ID del Paciente (único y requerido):</label>
+                <input type="text" id="patient_id" name="patient_id" required><br><br>
+    
+                <label for="appointment_date">Fecha de la Cita (requerido):</label>
+                <input type="date" id="appointment_date" name="appointment_date" required><br><br>
+    
+                <label for="diagnosis">Diagnóstico (requerido):</label>
+                <input type="text" id="diagnosis" name="diagnosis" required><br><br>
+    
+                <label for="medications">Medicamentos (separados por comas):</label>
+                <input type="text" id="medications" name="medications"><br><br>
+    
+                <label for="follow_up_date">Fecha de Seguimiento:</label>
+                <input type="date" id="follow_up_date" name="follow_up_date"><br><br>
+    
+                <label for="notes">Notas:</label>
+                <textarea id="notes" name="notes"></textarea><br><br>
+    
+                <input type="submit" value="Guardar Registro Médico">
+            </form>
+        </main>
+        <script src="../js/medicalRecordForm.js"></script>
+    </body>
+</html>
