@@ -1,8 +1,6 @@
-const URL = "http://localhost:3000/api/medicalRecord";
-
 const populateMedicalRecordForm = (recordId) => {
   if (recordId) {
-    fetch(`${URL}/${recordId}`, {
+    fetch(`http://localhost:3000/api/medicalRecord/${recordId}`, {
       method: "GET",
       headers: {
         Authorization: localStorage.getItem("token"),
@@ -53,12 +51,12 @@ const saveMedicalRecord = (recordId) => {
     notes,
   };
 
-  const url = recordId ? `${URL}/${recordId}` : URL;
-  const method = recordId ? "PUT" : "POST";
+  const endpoint = recordId ? `http://localhost:3000/api/medicalRecord/${recordId}` : 'http://localhost:3000/api/medicalRecord';
+  const endpoint_method = recordId ? "PUT" : "POST";
 
   // Realizar una solicitud al servidor para actualizar el registro.
-  fetch(url, {
-    method, // Puedes utilizar un método PUT para actualizar el registro.
+  fetch(endpoint, {
+    method: endpoint_method, // Puedes utilizar un método PUT para actualizar el registro.
     headers: {
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("token"),

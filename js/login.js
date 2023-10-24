@@ -1,12 +1,10 @@
-const URL = "http://localhost:3000/api/user";
-
 const login = e => {
   e.preventDefault();
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  fetch(`${URL}/login`, {
+  fetch('http://localhost:3000/api/user/login', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

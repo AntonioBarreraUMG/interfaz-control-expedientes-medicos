@@ -1,5 +1,3 @@
-const URL = "http://localhost:3000/api/user";
-
 const register = async e => {
   e.preventDefault();
 
@@ -13,7 +11,7 @@ const register = async e => {
   }
 
   try {
-    const response = await fetch(`${URL}/register`, {
+    const response = await fetch('http://localhost:3000/api/user/register', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

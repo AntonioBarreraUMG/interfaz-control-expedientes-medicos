@@ -1,8 +1,6 @@
-const URL = "http://localhost:3000/api/medicalRecord";
-
 const deleteRecord = (recordId) => {
     if (confirm("¿Estás seguro de que quieres eliminar este registro?")) {
-      fetch(`${URL}/${recordId}`, {
+      fetch(`http://localhost:3000/api/medicalRecord/${recordId}`, {
         method: "DELETE",
         headers: {
           Authorization: localStorage.getItem("token"),
