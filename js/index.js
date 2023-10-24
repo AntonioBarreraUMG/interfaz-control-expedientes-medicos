@@ -47,7 +47,7 @@ const populateRecordsList = (records) => {
 };
 
 const fetchAndPopulateRecordsList = async () => {
-    fetch(URL, {
+    fetch('http://localhost:3000/api/medicalRecord', {
         method: "GET",
         headers: {
             Authorization: localStorage.getItem("token"),
